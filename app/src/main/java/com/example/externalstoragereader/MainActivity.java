@@ -74,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
                 boolean search = lowerCaseResult.contains(searchInput);
                 //Displaying Toast with Hello Javatpoint message
                 if (search) {
-                    Toast.makeText(getApplicationContext(), "Word found", Toast.LENGTH_SHORT).show();
+                    int index = lowerCaseResult.indexOf(searchInput);
+                    Toast.makeText(getApplicationContext(), "Word found at position " + index , Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "Word not found", Toast.LENGTH_SHORT).show();
                 }
